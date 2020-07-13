@@ -6,26 +6,40 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JAVA注解和反射学习1 | kookie</title>
+  <title>MySQL学习1 | kookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JAVA注解和反射学习1">
+  <meta name="description" content="MySQL学习1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA注解和反射学习1">
-<meta property="og:url" content="http://yoursite.com/2020/07/13/JAVA%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A01/index.html">
+<meta property="og:title" content="MySQL学习1">
+<meta property="og:url" content="http://yoursite.com/2020/07/13/MySQL%E5%AD%A6%E4%B9%A01/index.html">
 <meta property="og:site_name" content="kookie">
-<meta property="og:description" content="JAVA注解和反射学习1">
+<meta property="og:description" content="MySQL学习1">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020071014081013.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711095921607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711102929471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711103025297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200712085915720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200712085953679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-07-13T00:43:45.889Z">
-<meta property="article:modified_time" content="2020-07-13T00:43:45.905Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020071309211867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713101248196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713101948179.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713102153581.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020071310251058.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713102652237.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713102814322.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020071310300781.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713103454490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713103548962.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713103657573.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713104200922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713112359471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713112752764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713112818716.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713112921460.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020071311300131.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713113022820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713113126990.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200713113204644.png">
+<meta property="article:published_time" content="2020-07-13T03:32:47.391Z">
+<meta property="article:modified_time" content="2020-07-13T03:32:47.398Z">
 <meta property="article:author" content="kookie">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020071014081013.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020071309211867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="kookie" type="application/atom+xml">
   
@@ -161,168 +175,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JAVA注解和反射学习1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL学习1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JAVA注解和反射学习1
+      MySQL学习1
     </h1>
   
 
         
-        <a href="/2020/07/13/JAVA%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A01/" class="archive-article-date">
-  	<time datetime="2020-07-13T00:43:45.889Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+        <a href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A01/" class="archive-article-date">
+  	<time datetime="2020-07-13T03:32:47.391Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JAVA注解和反射学习1"><a href="#JAVA注解和反射学习1" class="headerlink" title="JAVA注解和反射学习1"></a>JAVA注解和反射学习1</h1><a id="more"></a>
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h4 id="什么是注解"><a href="#什么是注解" class="headerlink" title="什么是注解"></a>什么是注解</h4><ul>
-<li><p>Annotation是JDK5.0开始引入的新技术</p>
-</li>
-<li><p>Annaotation的作用：</p>
-<pre><code>*不是程序本身，可以对程序做出解释
-可以被其他程序(如编译器)读取*</code></pre></li>
-<li><p>Annotation的格式：</p>
-<pre><code>注解是以“@注释名”在代码中存在的，还可以添加一些参考值</code></pre></li>
-<li><p>Annotation可以在哪里使用？</p>
-<pre><code>可以附加在package、class、method、field等上面，相当于给他们添加了额外的辅助信息，我们可以通过反射机制编程实现对这些元数据的访问</code></pre></li>
-</ul>
-<hr>
-<h4 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h4><ul>
-<li>@Override:定义在java.lang.Override中，此注释只适用于修辞方法，表示一个方法声明打算重写超类中的拎一个方法声明</li>
-<li>@Deprecated:定义在java.lang.Deprecated中，此注释可以用于修辞方法，属性，类，表示不鼓励程序员使用这样的元素，通常是因为它很危险或者存在更好的选择</li>
-<li>@SuppressWarnings:定义在java.lang.SuppressWarning中，用来抑制编译时的警告信息。与前两个注释有所不同，你需要添加一个参数才能正确使用，这些参数都是已经定义好了的<figure class="highlight plain"><figcaption><span>Annotation;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;什么是注解</span><br><span class="line">public class Test1 extends Object&#123;</span><br><span class="line">    &#x2F;&#x2F;@Override  重写的注解</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return super.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;Deprecated 不推荐程序员使用，但是可以使用，或者存在更好的方式</span><br><span class="line">    @Deprecated</span><br><span class="line">    public static void test()&#123;</span><br><span class="line">        System.out.println(&quot;Deprecated&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @SuppressWarnings(&quot;all&quot;)</span><br><span class="line">    public void test02()&#123;</span><br><span class="line">        List list &#x3D;new ArrayList();</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h4><ul>
-<li><p>元注解的作用就是负责注解其他注解，JAVA定义了4个标准的meta-annotation类型，他们被用来提供对其他annotation类型作说明</p>
-</li>
-<li><p>这些类型和他们所支持的类java.lang.annotation包中可以找到</p>
-<pre><code>- @Target:用于描述注解的使用范围(即：被描述的注解可以用在说明地方)
-- @Retention:表示需要在说明级别保存该注释信息，用域描述注解的生命周期
-- @Document:说明该注解将被包含在javadoc中
-- @Inherited:说明子类可以继承父类中的注解</code></pre><figure class="highlight plain"><figcaption><span>Annotation;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import java.lang.annotation.*;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;测试元注解</span><br><span class="line">public class Test2 &#123;</span><br><span class="line">    @MyAnnotation</span><br><span class="line">    public void test()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义一个注解</span><br><span class="line">&#x2F;&#x2F;Target表示我们的注解可以用在哪些地方</span><br><span class="line">@Target(value&#x3D;&#123;ElementType.METHOD,ElementType.TYPE&#125; )</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;Retention表示我们的注解在声明地方还有效(有效的范围)</span><br><span class="line">&#x2F;&#x2F; runtime&gt;class&gt;sources</span><br><span class="line">@Retention(value&#x3D; RetentionPolicy.RUNTIME)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;Documented表示是否将我们的注解生成在JAVAdoc中</span><br><span class="line">@Documented</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;Inherited 子类可以继承父类的注解</span><br><span class="line">@Inherited</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@interface MyAnnotation&#123;           &#x2F;&#x2F;一个类里面只能有一个公共的方法，所以这里不能加public</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h4 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h4><ul>
-<li><p>使用@interface自定义注解时，自动继承了java.lang.annotation.Annotation接口</p>
-</li>
-<li><p>分析：</p>
-<pre><code>- @interface用来声明一个注解，格式：public @interface 注解名{定义内容}
-- 其中的每一个方法实际上时声明了一个配置参数
-- 方法的名称就是参数的名称
-- 返回值类型就是参数的类型(返回值只能是基本类型，Class,String,enum)
-- 可以通过default来声明参数的默认值
-- 如果只有一个参数成员，一般参数名为value
-- 注解元素必须要有值，我们定义注解元素时，经常使用空字符串，0作为默认值</code></pre><figure class="highlight plain"><figcaption><span>Annotation;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import java.lang.annotation.ElementType;</span><br><span class="line">import java.lang.annotation.Retention;</span><br><span class="line">import java.lang.annotation.RetentionPolicy;</span><br><span class="line">import java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;自定义注解</span><br><span class="line">public class Test3 &#123;</span><br><span class="line">    &#x2F;&#x2F;注解可以显示赋值，如果没有默认值，就必须给注解赋值</span><br><span class="line">    &#x2F;&#x2F;给注解中的参数是没有顺序的</span><br><span class="line">    @MyAnnotation2(name&#x3D;&quot;haha&quot;)</span><br><span class="line">    public void test()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @MyAnnotation3(&quot;&quot;)</span><br><span class="line">    public void test2()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@interface MyAnnotation2&#123;</span><br><span class="line">       &#x2F;&#x2F;注解的参数：参数类型+参数名（）；</span><br><span class="line">       String name() default &quot;&quot;;  &#x2F;&#x2F;添加默认值以后，就不用在注解中显示的加上参数</span><br><span class="line">       int age() default 0;</span><br><span class="line">       int id() default -1;&#x2F;&#x2F;如果默认值为-1，代表不存在，indexof,如果找不到就返回-1</span><br><span class="line">       String[] schools() default &#123;&quot;qianghua&quot;,&quot;beida&quot;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@interface MyAnnotation3&#123;</span><br><span class="line">    String value();&#x2F;&#x2F;当参数是value的时候，注解可以不用写具体参数，通过&quot;&quot; 默认就行</span><br><span class="line">                   &#x2F;&#x2F;但是仅限于value可以</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p><strong>什么是API:</strong><br>API，英文全称Application Programming Interface，翻译为“应用程序编程接口”。是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。<br>*我们不妨把API的诞生过程用一个小故事展示出来：<br>研发人员A开发了软件A，研发人员B正在研发软件B。<br>有一天，研发人员B想要调用软件A的部分功能来用，但是他又不想从头看一遍软件A的源码和功能实现过程，怎么办呢？<br>研发人员A想了一个好主意：我把软件A里你需要的功能打包好，写成一个函数；你按照我说的流程，把这个函数放在软件B里，就能直接用我的功能了！<br>其中，API就是研发人员A说的那个函数。 *</p>
-<hr>
-<h2 id="反射机制"><a href="#反射机制" class="headerlink" title="反射机制"></a>反射机制</h2><h5 id="静态语言-VS-动态语言"><a href="#静态语言-VS-动态语言" class="headerlink" title="静态语言 VS 动态语言"></a>静态语言 VS 动态语言</h5><p><strong>动态语言</strong>：<br>是一类在运行时可以改变其结构的语言：例如新的函数、对象、甚至代码可以被引进，已有的函数可以被删除或是其他结构上的变化。通俗点说就是在运行时代码可以根据某些条件改变自身结构<br>                主要动态语言：Object-C、C#、Javascript、PHP、Python<br><strong>静态语言：</strong><br>与动态语言相对应的，运行时结构不可变的语言就是静态语言。如Java、C、C++<br>Java不是动态语言，但是Java可以称之为“准动态语言”。即Java有一定的动态性，我们可以利用反射机制获得类似动态语言的特性。Java的动态性让编程更加灵活              </p>
-<h5 id="Java-Reflection"><a href="#Java-Reflection" class="headerlink" title="Java Reflection"></a>Java Reflection</h5><ul>
-<li>Reflection(反射)是Java被视为动态语言的关键，反射机制允许程序在执行期借助于Reflection API取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。</li>
-<li>加载完类之后，在堆内存的方法区中就产生了一个Class类型的对象(一个类只有一个Class对象)，这个对象就包含了完整的类的结构信息。我们可以通过这个对象看到类的结构。这个对象就像一面镜子，透过这个镜子看到类的结构，所以形象的称之为：反射<br><img src="https://img-blog.csdnimg.cn/2020071014081013.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"> </li>
-</ul>
-<hr>
-<h6 id="Java反射机制研究及应用"><a href="#Java反射机制研究及应用" class="headerlink" title="Java反射机制研究及应用"></a>Java反射机制研究及应用</h6><p><strong>提供的功能：</strong></p>
+        <h1 id="MySQL学习1"><a href="#MySQL学习1" class="headerlink" title="MySQL学习1"></a>MySQL学习1</h1><a id="more"></a>
+<h4 id="1-初识MySQL"><a href="#1-初识MySQL" class="headerlink" title="1.初识MySQL"></a>1.初识MySQL</h4><p>JavaEE:企业级java开发<br>前端：(页面：展示、数据)<br>后台：(连接点：连接数据库JDBC、链接前端(控制、控制视图跳转、和给前端传递数据))<br>数据库：(存数据、TXT、Excel、word)</p>
+<h6 id="1-1、什么是数据库"><a href="#1-1、什么是数据库" class="headerlink" title="1.1、什么是数据库"></a>1.1、什么是数据库</h6><p>数据库：(DB,DataBase)<br>概念：数据仓库、软件、安装在操作系统之上(windows,linux,mac…)之上。<br>SQL：可以存储大量的数据，500万以下<br>作用：存储数据、管理数据</p>
+<h6 id="1-2、数据库分类"><a href="#1-2、数据库分类" class="headerlink" title="1.2、数据库分类"></a>1.2、数据库分类</h6><p><strong>关系型数据库：(SQL)</strong></p>
 <ul>
-<li>在运行时判断任意一个对象所属的类</li>
-<li>在运行时构造任意一个类的对象</li>
-<li>在运行时判断任意一个类所具有的成员变量和方法</li>
-<li>在运行时获取泛型信息</li>
-<li>在运行时调用任意一个对象的成员变量和方法</li>
-<li>在运行时处理注解</li>
-<li>生成动态代理</li>
+<li>MySQL、Oracle、sql Server、DB2、SQLlite</li>
+<li>通过表和表之间，行和行之间的关系进行数据的存储，学员信息表，考勤表</li>
 </ul>
-<p> <strong>优点和缺点：</strong><br> 优点：可以实现动态创建对象和编译，体现出很大的灵活性<br> 缺点：对性能有影响。使用反射基本上是一种解释操作，我们可以告诉JVM,我们希望做什么并且它满足我们的要求。这类操作总是鳗鱼直接执行相同用的操作。<br> <figure class="highlight plain"><figcaption><span>reflection;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F;什么叫反射</span><br><span class="line">public class test2 &#123;</span><br><span class="line">    public static void main(String[] args) throws ClassNotFoundException&#123;</span><br><span class="line">        &#x2F;&#x2F;通过反射获取类的class对象</span><br><span class="line">        Class c1&#x3D;Class.forName(&quot;reflection.User&quot;);</span><br><span class="line">        System.out.println(c1);</span><br><span class="line"></span><br><span class="line">        Class c2&#x3D;Class.forName(&quot;reflection.User&quot;);</span><br><span class="line">        Class c3&#x3D;Class.forName(&quot;reflection.User&quot;);</span><br><span class="line">        Class c4&#x3D;Class.forName(&quot;reflection.User&quot;);</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;一个类在内存中只有一个Class对象</span><br><span class="line">        &#x2F;&#x2F;一个类被加载后，类的整个结构都会被封装在Class对象中</span><br><span class="line">        System.out.println(c2.hashCode());</span><br><span class="line">        System.out.println(c3.hashCode());</span><br><span class="line">        System.out.println(c4.hashCode());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义一个实体类：pojo, entity</span><br><span class="line">class User&#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int id;</span><br><span class="line">    private int age;</span><br><span class="line"></span><br><span class="line">    public User() &#123;    &#x2F;&#x2F;无参构造</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public User(String name, int id, int age) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">        this.id &#x3D; id;</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getId() &#123;</span><br><span class="line">        return id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setId(int id) &#123;</span><br><span class="line">        this.id &#x3D; id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age &#x3D; age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;User&#123;&quot; +</span><br><span class="line">                &quot;name&#x3D;&#39;&quot; + name + &#39;\&#39;&#39; +</span><br><span class="line">                &quot;, id&#x3D;&quot; + id +</span><br><span class="line">                &quot;, age&#x3D;&quot; + age +</span><br><span class="line">                &#39;&#125;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h4 id="获取Class类的实例"><a href="#获取Class类的实例" class="headerlink" title="获取Class类的实例"></a>获取Class类的实例</h4><ul>
-<li><p>若已知具体的类，通过类的class属性获取，该方法时最为安全可靠，程序性能最高。</p>
-</li>
-<li><p>已知某个类的实例，调用该实例的getClass()方法获得Class对象</p>
-</li>
-<li><p>已知一个类的全类名，且该类在类路径下，可通过Class类的静态方法forName()获取，可能抛出ClassNotFoundException</p>
-</li>
-<li><p>内置基本数据类型可以直接用类名</p>
-</li>
-<li><p>还可以利用ClassLoader</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">    package reflection;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;测试Class类的创建方式有哪些</span><br><span class="line">public class Test3 &#123;</span><br><span class="line">    public static void main(String[] args) throws ClassNotFoundException&#123;</span><br><span class="line">        Person person&#x3D;new Student();</span><br><span class="line">        System.out.println(&quot;这个人是：&quot;+person.name);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;方式一：通过对象获得</span><br><span class="line">        Class c1&#x3D;person.getClass();</span><br><span class="line">        System.out.println(c1.hashCode());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;方式二：forname获得</span><br><span class="line">        Class c2&#x3D;Class.forName(&quot;reflection.Student&quot;);</span><br><span class="line">        System.out.println(c2.hashCode());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;方式三：通过类名.class获得</span><br><span class="line">        Class c3&#x3D;Student.class;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;方式四：基本内置类型的包装类都有一个Type属性</span><br><span class="line">        Class c4&#x3D;Integer.TYPE;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;获得父类类型</span><br><span class="line">        Class c5&#x3D;c1.getSuperclass();</span><br><span class="line">        System.out.println(c5);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Person&#123;</span><br><span class="line">    public String name;</span><br><span class="line"></span><br><span class="line">    public Person() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Person(String name) &#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Person&#123;&quot; +</span><br><span class="line">                &quot;name&#x3D;&#39;&quot; + name + &#39;\&#39;&#39; +</span><br><span class="line">                &#39;&#125;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Student extends Person&#123;</span><br><span class="line">    public Student()&#123;</span><br><span class="line">        this.name&#x3D;&quot;学生&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Teacher extends Person&#123;</span><br><span class="line">    public Teacher()&#123;</span><br><span class="line">       this.name&#x3D;&quot;老师&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h6 id="哪些类型可以有Class对象"><a href="#哪些类型可以有Class对象" class="headerlink" title="哪些类型可以有Class对象"></a>哪些类型可以有Class对象</h6></li>
-<li><p>class:外部类，成员(成员内部类，静态内部类)，局部内部类，匿名内部类</p>
-</li>
-<li><p>interface:接口</p>
-</li>
-<li><p>[]：数组</p>
-</li>
-<li><p>enum:枚举</p>
-</li>
-<li><p>annotation:@注解</p>
-</li>
-<li><p>primitive type:基本数据类型</p>
-</li>
-<li><p>void</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">package reflection;</span><br><span class="line"></span><br><span class="line">import java.lang.annotation.ElementType;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;所有类型的Class</span><br><span class="line">public class Test4&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">            Class c1&#x3D;Object.class;&#x2F;&#x2F;类</span><br><span class="line">            Class c2&#x3D;Comparable.class;&#x2F;&#x2F;接口</span><br><span class="line">            Class c3&#x3D;String[].class;&#x2F;&#x2F;一维数组</span><br><span class="line">            Class c4&#x3D;int[][].class;&#x2F;&#x2F;二维数组</span><br><span class="line">            Class c5&#x3D;Override.class;&#x2F;&#x2F;注解</span><br><span class="line">            Class c6&#x3D; ElementType.class;&#x2F;&#x2F;枚举</span><br><span class="line">            Class c7&#x3D;Integer.class;&#x2F;&#x2F;基本数据类型</span><br><span class="line">            Class c8&#x3D;void.class;&#x2F;&#x2F;void</span><br><span class="line">            Class c9&#x3D;Class.class;&#x2F;&#x2F;class</span><br><span class="line"></span><br><span class="line">            System.out.println(c1);</span><br><span class="line">            System.out.println(c2);</span><br><span class="line">            System.out.println(c3);</span><br><span class="line">            System.out.println(c4);</span><br><span class="line">            System.out.println(c5);</span><br><span class="line">            System.out.println(c6);</span><br><span class="line">            System.out.println(c7);</span><br><span class="line">            System.out.println(c8);</span><br><span class="line">            System.out.println(c9);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F;只要元素类型和维度一样，就是同一个Class</span><br><span class="line">            int[] a&#x3D;new int[10];</span><br><span class="line">            int[] b&#x3D;new int[100];</span><br><span class="line">            System.out.println(a.getClass().hashCode());</span><br><span class="line">            System.out.println(b.getClass().hashCode());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200711095921607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ul>
-<hr>
-<h4 id="Class加载的过程"><a href="#Class加载的过程" class="headerlink" title="Class加载的过程"></a>Class加载的过程</h4><h6 id="Java内存分析："><a href="#Java内存分析：" class="headerlink" title="Java内存分析："></a>Java内存分析：</h6><ol>
-<li>堆：</li>
-</ol>
+<p><strong>非关系型数据库：(NoSQL:not only sql)</strong></p>
 <ul>
-<li>存放new的对象和数组</li>
-<li>可以被所有的线程共享，不会存放别的对象引用</li>
+<li>Redis、MongDB</li>
+<li>非关系型数据库，对象存储，通过对象的自身属性来决定</li>
 </ul>
-<p>2.栈：</p>
+<p><strong>DBMS(数据库管理系统)</strong></p>
 <ul>
-<li>存放基本变量类型(会包含这个基本类型的具体数值)</li>
-<li>引用对象的变量(会存放这个引用在对立面的具体地址)</li>
-</ul>
-<p>3 .方法区：</p>
-<ul>
-<li>可以被所有的线程共享</li>
-<li>包含了所有的class和static变量</li>
-</ul>
-<hr>
-<p>类的加载过程<br><img src="https://img-blog.csdnimg.cn/20200711102929471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<hr>
-<p><img src="https://img-blog.csdnimg.cn/20200711103025297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">package reflection;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;讲解类时怎么加载的</span><br><span class="line">public class Test5 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        A a&#x3D;new A();</span><br><span class="line">        System.out.println(A.m);</span><br><span class="line">        &#x2F;*</span><br><span class="line">        1.加载到内存，会在堆里产生一个类对应class对象</span><br><span class="line">        2.链接，m是一个静态的变量，所以会给它一个初始值，链接结束后m&#x3D;0</span><br><span class="line">        new A这个动作就会在堆里产生一个新的对象：被new出来的A的对象，这个对象会指向A类的Class,拿到信息，</span><br><span class="line">        拿到这些数据后就会对A进行赋值</span><br><span class="line">        3.初始化</span><br><span class="line">           &lt;clinit&gt;()&#123;</span><br><span class="line">            System.out.println(&quot;A类静态代码初始化&quot;);</span><br><span class="line">             m&#x3D;300;</span><br><span class="line">             m&#x3D;100;</span><br><span class="line">           &#125;</span><br><span class="line">           m&#x3D;100;</span><br><span class="line">         *&#x2F;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class A&#123;</span><br><span class="line">    static&#123;</span><br><span class="line">        System.out.println(&quot;A类静态代码初始化&quot;);</span><br><span class="line">        m&#x3D;300;</span><br><span class="line">    &#125;</span><br><span class="line">    static int m&#x3D;100;</span><br><span class="line">    public A()&#123;</span><br><span class="line">        System.out.println(&quot;A类的无参构造初始化&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h6 id="什么时候会发生类初始化"><a href="#什么时候会发生类初始化" class="headerlink" title="什么时候会发生类初始化"></a>什么时候会发生类初始化</h6><p>1.类的主动引用(一定会发生类的初始化)</p>
-<ul>
-<li>当虚拟机启动时，先初始化main方法所在的类</li>
-<li>new一个类的对象</li>
-<li>调用类的静态成员(除了final常量)和静态方法</li>
-<li>使用java.lang.reflect包的方法堆类进行反射调用</li>
-<li>当初始化一个类，如果其父类没有被初始化，则会先初始化它的父类</li>
-</ul>
-<p>2类的被动引用(不会发生类的初始化)</p>
-<ul>
-<li>当访问一个静态域时，只有真正声明这个域的类才会被初始化。如：当子类引用父类的静态变量，不会导致子类初始化</li>
-<li>通过数组定义类引用，不会触发此类的初始化</li>
-<li>引用常量不会触发此类的初始化(常量在链接阶段就存入调用类的常量池中了)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">package reflection;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;测试类什么时候会初始化</span><br><span class="line">public class Test6 &#123;</span><br><span class="line">    static&#123;</span><br><span class="line">        System.out.println(&quot;main类被加载&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws ClassNotFoundException&#123;</span><br><span class="line">        &#x2F;&#x2F;1.主动引用</span><br><span class="line">        Son son&#x3D;new Son();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;反射也会产生主动引用</span><br><span class="line">        Class.forName(&quot;reflection.Son&quot;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;不会产生类的引用的方法</span><br><span class="line">        System.out.println(Son.b);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;数组不会加载类的初始化</span><br><span class="line">        Son[] array&#x3D;new Son[5];</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;常量也不会引起父类和子类的初始化</span><br><span class="line">        &#x2F;&#x2F;常量在链接阶段就调用到常量池中了</span><br><span class="line">        System.out.println(Son.M);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Father&#123;</span><br><span class="line">    static int b&#x3D;2;</span><br><span class="line">    static&#123;</span><br><span class="line">        System.out.println(&quot;父类被加载&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Son extends Father&#123;</span><br><span class="line">    static&#123;</span><br><span class="line">        System.out.println(&quot;子类被加载&quot;);</span><br><span class="line">        m&#x3D;300;</span><br><span class="line">    &#125;</span><br><span class="line">    static int m&#x3D;100;</span><br><span class="line">    static final int M&#x3D;1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>数据库的管理软件(相当于打开excel的WPS和Word),科学有效的管理数据，维护和获取数据；</li>
+<li>MySQL本质是数据库管理系统<br><img src="https://img-blog.csdnimg.cn/2020071309211867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><h6 id="1-3、MySQL简介"><a href="#1-3、MySQL简介" class="headerlink" title="1.3、MySQL简介"></a>1.3、MySQL简介</h6></li>
+<li>MySQL是一个关系型数据库管理系统</li>
+<li>MySQL是最好的RDBMS(Relational Database Management System,关系型数据库管理系统)应用之一。</li>
+<li>开源的数据库软件</li>
+<li>体积小、速度快、总体拥有成本低</li>
 </ul>
 <hr>
-<h4 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h4><ol>
-<li>类加载器的作用</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20200712085915720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="2、MySQL的安装"><a href="#2、MySQL的安装" class="headerlink" title="2、MySQL的安装"></a>2、MySQL的安装</h4><p>1.从官网下载，可以直接百度搜索，<strong>记得下载压缩包</strong>，不要下载exe。5.0的版本比较稳，8.0比较新<br><img src="https://img-blog.csdnimg.cn/20200713101248196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2.下载完成后解压到MySQL文件夹下<br>3.配置环境变量：path下添加mySQL的bin<br><img src="https://img-blog.csdnimg.cn/20200713101948179.png" alt="在这里插入图片描述"><br>4.新建一个mysql配置文件：mysql.ini<br><img src="https://img-blog.csdnimg.cn/20200713102153581.png" alt="在这里插入图片描述"><br>在配置文件里添加配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">basedir&#x3D;F:\MySQL\mysql-5.7.31\</span><br><span class="line">datadir&#x3D;F:\MySQL\mysql-5.7.31\data\</span><br><span class="line">port&#x3D;3306</span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
+<p>注意将basedir和datadir改成自己的文件路径，datadir中的data文件夹现在没有，后面会自动生成的<br>5.启动管理员模式下的cmd:<br><img src="https://img-blog.csdnimg.cn/2020071310251058.png" alt="在这里插入图片描述"><br>1).进入mysql/bin:<br><img src="https://img-blog.csdnimg.cn/20200713102652237.png" alt="在这里插入图片描述"><br>2).安装mysql:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld –install</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200713102814322.png" alt="在这里插入图片描述"><br>3).初始化数据库文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure --user&#x3D;mysql</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020071310300781.png" alt="在这里插入图片描述"><br>4).启动mysql,进去修改密码。第一次进去的时候没有密码，-p后面不要加东西，直接回车</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">net start mysql       &#x2F;&#x2F;启动mysql</span><br><span class="line"></span><br><span class="line">mysql –u root –p     &#x2F;&#x2F;-p后面不能有空格</span><br><span class="line"></span><br><span class="line">update mysql.user set authentication_string&#x3D;password(&#39;123456&#39;) whereuser&#x3D;&#39;root&#39; and Host &#x3D; &#39;localhost&#39;;</span><br><span class="line">                    &#x2F;&#x2F;将密码改成123456</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200713103454490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5).刷新权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200713103548962.png" alt="在这里插入图片描述"><br>6)注释掉ini配置文件里的跳过密码<br>skip-grant-tables前面加一个#<br><img src="https://img-blog.csdnimg.cn/20200713103657573.png" alt="在这里插入图片描述"><br>7).重启mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">net start mysql           &#x2F;&#x2F;启动mysql</span><br><span class="line">net stop mysql            &#x2F;&#x2F;停止mysql</span><br><span class="line">mysql -u root -p123456    &#x2F;&#x2F;进入mysql</span><br><span class="line">exit                      &#x2F;&#x2F;退出mysql</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20200713104200922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <hr>
-<p><img src="https://img-blog.csdnimg.cn/20200712085953679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h6 id="2-2-安装一个可视化软件：SQLyog"><a href="#2-2-安装一个可视化软件：SQLyog" class="headerlink" title="2.2 安装一个可视化软件：SQLyog"></a>2.2 安装一个可视化软件：SQLyog</h6><p>1.安装包下载，这里用的是12.08版本<br>2.下载完成注册：<br>3.注册完成会出现一个新建的界面，按照下面的进行新建，<strong>MySQL一定要处于开着的状态</strong><br><img src="https://img-blog.csdnimg.cn/20200713112359471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4.新建一个数据库：<br><img src="https://img-blog.csdnimg.cn/20200713112752764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <hr>
-<h4 id="获取类的运行时结构"><a href="#获取类的运行时结构" class="headerlink" title="获取类的运行时结构"></a>获取类的运行时结构</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200713112818716.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr>
+<p>一个名为school的数据库创建成功：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200713112921460.png" alt="在这里插入图片描述"><br>在表下添加一个新表：<br><img src="https://img-blog.csdnimg.cn/2020071311300131.png" alt="在这里插入图片描述"></p>
+<hr>
+<p>将引擎和字符集更改掉<br><img src="https://img-blog.csdnimg.cn/20200713113022820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr>
+<p>新表创建成功：<br><img src="https://img-blog.csdnimg.cn/20200713113126990.png" alt="在这里插入图片描述"><br>在新表里添加数据：记得要点击一下刷新键<br><img src="https://img-blog.csdnimg.cn/20200713113204644.png" alt="在这里插入图片描述"></p>
+
       
 
       
@@ -401,7 +321,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/13/JAVA%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A01/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/13/MySQL%E5%AD%A6%E4%B9%A01/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -415,18 +335,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A01/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL学习1
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/02/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A01/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JAVA多线程学习1</div>
+    <a href="/2020/07/13/JAVA%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVA注解和反射学习1</div>
       <i class="icon-circle-right"></i>
     </a>
   
