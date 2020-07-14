@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | kookie</title>
+  <title>MySQL学习3 | kookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="kookie">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="MySQL学习3–MySQL的数据管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL学习3">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/MySQL%E5%AD%A6%E4%B9%A03/index.html">
 <meta property="og:site_name" content="kookie">
+<meta property="og:description" content="MySQL学习3–MySQL的数据管理">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-14T08:17:04.130Z">
+<meta property="article:modified_time" content="2020-07-14T08:16:35.845Z">
 <meta property="article:author" content="kookie">
 <meta name="twitter:card" content="summary">
   
@@ -150,295 +154,228 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-MySQL学习3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MySQL学习3
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/14/MySQL%E5%AD%A6%E4%B9%A03/" class="archive-article-date">
+
+        
+        <a href="/2020/07/14/MySQL%E5%AD%A6%E4%B9%A03/" class="archive-article-date">
   	<time datetime="2020-07-14T08:17:04.130Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/14/MySQL%E5%AD%A6%E4%B9%A03/">MySQL学习3</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MySQL学习3–MySQL的数据管理"><a href="#MySQL学习3–MySQL的数据管理" class="headerlink" title="MySQL学习3–MySQL的数据管理"></a>MySQL学习3–MySQL的数据管理</h1><a id="more"></a>
+<h2 id="MySQL的数据管理"><a href="#MySQL的数据管理" class="headerlink" title="MySQL的数据管理"></a>MySQL的数据管理</h2><h4 id="1-1物理外键（了解即可）"><a href="#1-1物理外键（了解即可）" class="headerlink" title="1.1物理外键（了解即可）"></a>1.1物理外键（了解即可）</h4><p>物理外键属于数据库级别的外键，不建议使用，因为会造成每次delete或者update都必须考虑外键约束。</p>
+<blockquote>
+<p>方式一：在创建表的时候，增加约束</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;grade&#96;(</span><br><span class="line">   &#96;gradeid&#96; INT(10) NOT NULL AUTO_INCREMENT COMMENT &#39;年纪id&#39;,</span><br><span class="line">   &#96;gradename&#96; VARCHAR(50) NOT NULL COMMENT &#39;年纪名称&#39;,</span><br><span class="line">   PRIMARY KEY (&#96;gradeid&#96;)</span><br><span class="line">)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8</span><br><span class="line"></span><br><span class="line">-- 学生表的gradeid字段 要去引用年纪表的gradeid</span><br><span class="line">-- 定义外键key</span><br><span class="line">-- 给这个外键添加约束（执行引用）  references 引用</span><br><span class="line">CREATE TABLE IF NOT EXISTS &#96;student&#96;(</span><br><span class="line">    &#96;id&#96; INT(4)NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,</span><br><span class="line">    &#96;name&#96; VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,</span><br><span class="line">    &#96;pwd&#96; VARCHAR(20) NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,</span><br><span class="line">    &#96;sex&#96; VARCHAR(2) NOT NULL DEFAULT &#39;男&#39; COMMENT &#39;性别&#39;,</span><br><span class="line">    &#96;birthday&#96; DATETIME NOT NULL COMMENT &#39;出生日期&#39;,</span><br><span class="line">    &#96;gradeid&#96; INT(10) NOT NULL COMMENT &#39;学生年级&#39;,</span><br><span class="line">    &#96;address&#96; VARCHAR(100) NOT NULL COMMENT &#39;家庭住址&#39;,</span><br><span class="line">    &#96;email&#96; VARCHAR(50) DEFAULT NULL COMMENT &#39;邮箱&#39;,</span><br><span class="line">    PRIMARY KEY(&#96;id&#96;),</span><br><span class="line">    KEY &#96;FK_gradeid&#96; (&#96;gradeid&#96;),</span><br><span class="line">    CONSTRAINT &#96;FK_gradeid&#96; FOREIGN KEY (&#96;gradeid&#96;) REFERENCES &#96;grade&#96; (&#96;gradeid&#96;)</span><br><span class="line">    </span><br><span class="line">)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8</span><br></pre></td></tr></table></figure>
+<p>删除有外键关系的表的时候，必须先删除引用别人的表（从表），再删除被引用的表（主表）</p>
+<blockquote>
+<p>方式二：创建表成功后，添加外键约束</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;grade&#96;(</span><br><span class="line">   &#96;gradeid&#96; INT(10) NOT NULL AUTO_INCREMENT COMMENT &#39;年纪id&#39;,</span><br><span class="line">   &#96;gradename&#96; VARCHAR(50) NOT NULL COMMENT &#39;年纪名称&#39;,</span><br><span class="line">   PRIMARY KEY (&#96;gradeid&#96;)</span><br><span class="line">)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8</span><br><span class="line"></span><br><span class="line">CREATE TABLE IF NOT EXISTS &#96;student&#96;(</span><br><span class="line">    &#96;id&#96; INT(4)NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,</span><br><span class="line">    &#96;name&#96; VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,</span><br><span class="line">    &#96;pwd&#96; VARCHAR(20) NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,</span><br><span class="line">    &#96;sex&#96; VARCHAR(2) NOT NULL DEFAULT &#39;男&#39; COMMENT &#39;性别&#39;,</span><br><span class="line">    &#96;birthday&#96; DATETIME NOT NULL COMMENT &#39;出生日期&#39;,</span><br><span class="line">    &#96;gradeid&#96; INT(10) NOT NULL COMMENT &#39;学生年级&#39;,</span><br><span class="line">    &#96;address&#96; VARCHAR(100) NOT NULL COMMENT &#39;家庭住址&#39;,</span><br><span class="line">    &#96;email&#96; VARCHAR(50) DEFAULT NULL COMMENT &#39;邮箱&#39;,</span><br><span class="line">    PRIMARY KEY(&#96;id&#96;) </span><br><span class="line">)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8</span><br><span class="line"></span><br><span class="line">-- 创建表的时候没有外键关系</span><br><span class="line">ALTER TABLE &#96;student&#96;</span><br><span class="line">ADD CONSTRAINT &#96;FK_gradeid&#96; FOREIGN KEY(&#96;gradeid&#96;) REFERENCES &#96;grade&#96;(&#96;gradeid&#96;);</span><br><span class="line"></span><br><span class="line">-- alter table &#96;表名&#96; add constraint &#96;约束名&#96; foreign key(作为外键的例) references 那个表（&#96;哪个字段&#96;）</span><br></pre></td></tr></table></figure>
+<p><strong>最佳实践</strong></p>
+<ul>
+<li>数据库就是单纯的表，只用来存数据，只有行（数据）换个列（字段）</li>
+<li>想使用多张表的数据，想使用外键(程序去实现)</li>
+</ul>
+<h4 id="1-2-DML语言-数据库管理语言-全部记住"><a href="#1-2-DML语言-数据库管理语言-全部记住" class="headerlink" title="1.2 DML语言(数据库管理语言)(全部记住)"></a>1.2 DML语言(数据库管理语言)(全部记住)</h4><p><strong>数据库意义</strong>：数据存储、数据管理<br>DML语言：数据操作语言</p>
+<ul>
+<li>insert</li>
+<li>update</li>
+<li>delete</li>
+</ul>
+<h4 id="1-3-添加"><a href="#1-3-添加" class="headerlink" title="1.3 添加"></a>1.3 添加</h4><blockquote>
+<p>insert</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-- 插入语句(添加)</span><br><span class="line">-- insert into 表名（[字段名1,字段2,字段3]）values (&#39;值1&#39;）,（&#39;值2&#39;）,（&#39;值3&#39;）.....()</span><br><span class="line">INSERT INTO &#96;grade&#96;(&#96;gradename&#96;) VALUES(&#39;大四&#39;)</span><br><span class="line">-- 由于主键自增我们可以省略（如果不写字段，它就会一一匹配）</span><br><span class="line">-- 一般写插入语句，数据和字段一定要一一对应</span><br><span class="line">INSERT INTO &#96;grade&#96; VALUES(&#39;大三&#39;)</span><br><span class="line">--上面的语句相当于INSERT INTO &#96;grade&#96;(&#96;gradeid&#96;,&#96;gradename&#96;) VALUES(&#39;大三&#39;,null)</span><br><span class="line">--插入多个字段</span><br><span class="line">INSERT INTO &#96;grade&#96;(&#96;name&#96;) VALUES (&#39;大一&#39;),(&#39;大二&#39;)</span><br><span class="line">INSERT INTO &#96;student&#96;(&#96;name&#96;) VALUES (&#39;张三&#39;)</span><br><span class="line">INSERT INTO &#96;student&#96;(&#96;name&#96;,&#96;pwd&#96;,&#96;sex&#96;) VALUES (&#39;张三&#39;,&#39;aaaaaa&#39;,&#39;女&#39;)</span><br><span class="line">INSERT INTO &#96;student&#96;(&#96;name&#96;,&#96;pwd&#96;,&#96;sex&#96;) VALUES (&#39;李四&#39;,&#39;bbbbbb&#39;,&#39;女&#39;)</span><br><span class="line">INSERT INTO &#96;student&#96;(&#96;name&#96;,&#96;pwd&#96;,&#96;sex&#96;)</span><br><span class="line">VALUES (&#39;王五&#39;,&#39;cccccc&#39;,&#39;男&#39;),(&#39;李丽丽&#39;,&#39;dddddd&#39;,&#39;女&#39;),(&#39;涨涨涨&#39;,&#39;eeeeee&#39;,&#39;男&#39;)</span><br></pre></td></tr></table></figure>
+<p>语法：insert into 表名（字段名1，字段名2，字段名3….）values(值1),(值2),(值3)….<br>注意事项：</p>
+<ul>
+<li>字段和字段之间使用英文逗号隔开</li>
+<li>字段是可以省略的，但是后面的值必须要一一对应，不能少</li>
+<li>可以同时插入多条数据，values后面的值需要使用“，”隔开：values (),(),()….</li>
+</ul>
+<h4 id="1-4-修改"><a href="#1-4-修改" class="headerlink" title="1.4 修改"></a>1.4 修改</h4><blockquote>
+<p>update  修改谁（条件）  set原来的值=新值</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-- 修改学员的名字，带了条件</span><br><span class="line">UPDATE &#96;student&#96; SET &#96;name&#96;&#x3D;&#39;kookie&#39; WHERE id&#x3D;1;</span><br><span class="line">-- 不指定条件的情况下，会改动所有的表</span><br><span class="line">UPDATE &#96;student&#96; SET &#96;name&#96;&#x3D;&#39;chime&#39;</span><br><span class="line"></span><br><span class="line">-- 修改多个属性</span><br><span class="line">UPDATE &#96;student&#96; SET &#96;name&#96;&#x3D;&#39;kookie&#39;,&#96;email&#96;&#x3D;&#39;12345678@qq.com&#39; WHERE id&#x3D;1 </span><br><span class="line"></span><br><span class="line">-- 语法：</span><br><span class="line">update [表名] set [属性1]&#x3D;值，[属性2]&#x3D;值，[属性3]&#x3D;值...where [条件]</span><br></pre></td></tr></table></figure>
+<p>条件：where子句 [运算符]：id=某个值、id&gt;某个值、id在某个区间内<br>操作符会返回boolean值<br>|  操作符|  意义|范围 |结果<br>|–|–|–|–|<br>|=  | 等于 |5=6|false<br>|&lt;&gt;或！=|不等于|5&lt;&gt;6|true<br>|&gt;<br>|&lt;<br>|&gt;=<br>|&lt;=<br>|BETWEEN A and B|在某个范围内|<br>|AND|&amp;&amp;|5&gt;1 and 1&gt;2|false<br>|OR| 或|5&gt;1 or 1&gt;2|true</p>
+<blockquote>
+<p>– 通过多个条件定位数据<br>UPDATE <code>student</code> SET <code>name</code>=’jhope’ WHERE <code>name</code>=’chime’ AND <code>sex</code>=’女’</p>
+</blockquote>
+<p><strong>语法</strong>：update [表名] set [属性1]=value1，[属性2]=value2，[属性3]=value3…where [条件]<br><strong>注意</strong>：</p>
+<ul>
+<li>属性是数据库的列，带上``</li>
+<li>条件，筛选的条件，如果没有指定则会修改所有的列</li>
+<li>多个设置间的属性之间，使用英文隔开</li>
+<li>value:是一个具体的值，也可以是一个变量<blockquote>
+<p>UPDATE <code>student</code> SET <code>birthday</code>=CURRENT_TIME WHERE <code>name</code>=’kookie’</p>
+</blockquote>
+<h4 id="1-5-删除"><a href="#1-5-删除" class="headerlink" title="1.5 删除"></a>1.5 删除</h4><blockquote>
+<p>delete命令</p>
+</blockquote>
+</li>
+</ul>
+<p>语法：delete from 表名 where 条件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 删除数据（避免这样写）</span><br><span class="line">DELETE FROM &#96;student&#96; ;</span><br><span class="line"></span><br><span class="line">--删除指定数据</span><br><span class="line">DELETE FROM &#96;student&#96; WHERE id&#x3D;1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>TRUNCATE 命令</p>
+</blockquote>
+<p>作用：完全清空一个数据库表，表的结构和索引约束不会变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 清空student表</span><br><span class="line">TRUNCATE &#96;student&#96;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>delete和TRUNCATE的区别</p>
+</blockquote>
+<ul>
+<li>相同点：都能删除数据，都不会删除表结构</li>
+<li>不同：<pre><code>1.TRUNACTE 重新设置 自增列 计数器会归零
+2.TRUNCATE 不会影响事务</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;test&#96;(</span><br><span class="line">   &#96;id&#96; INT(10) NOT NULL AUTO_INCREMENT,</span><br><span class="line">   &#96;coll&#96; VARCHAR(20) NOT NULL,</span><br><span class="line">   PRIMARY KEY(&#96;id&#96;)</span><br><span class="line">)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8</span><br><span class="line"></span><br><span class="line">INSERT INTO &#96;test&#96;(&#96;coll&#96;) VALUES(&#39;1&#39;),(&#39;2&#39;),(&#39;3&#39;)</span><br><span class="line">DELETE FROM test  --不会影响自增</span><br><span class="line">TRUNCATE TABLE &#96;test&#96;  -- 自增会归零</span><br></pre></td></tr></table></figure>
+<p><strong>拓展：</strong> delete删除的问题，重启数据库后，不同引擎的现象：</p>
+<ul>
+<li>INNODB：自增会从1开始(存在内存当中的，断电即失)</li>
+<li>MYISAM：继续从上一个自增量开始(因为是存在文件中的，不会丢失)</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/MySQL%E5%AD%A6%E4%B9%A03/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A02/" class="archive-article-date">
-  	<time datetime="2020-07-13T11:29:45.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A02/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL学习2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A02/">MySQL学习2</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A01/" class="archive-article-date">
-  	<time datetime="2020-07-13T03:32:47.391Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/MySQL%E5%AD%A6%E4%B9%A01/">MySQL学习1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/JAVA%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A01/" class="archive-article-date">
-  	<time datetime="2020-07-13T00:43:45.889Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/JAVA%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A01/">JAVA注解和反射学习1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/02/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A01/" class="archive-article-date">
-  	<time datetime="2020-07-02T09:22:17.473Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/02/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A01/">JAVA多线程学习1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/01/JAVA%E5%AD%A6%E4%B9%A06/" class="archive-article-date">
-  	<time datetime="2020-07-01T01:31:59.949Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/01/JAVA%E5%AD%A6%E4%B9%A06/">JAVA学习6</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/30/JAVA%E7%9A%84%E5%AD%A6%E4%B9%A05/" class="archive-article-date">
-  	<time datetime="2020-06-30T07:44:05.267Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/30/JAVA%E7%9A%84%E5%AD%A6%E4%B9%A05/">JAVA的学习5</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/29/JAVA%E7%9A%84%E5%AD%A6%E4%B9%A04/" class="archive-article-date">
-  	<time datetime="2020-06-29T08:40:57.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/29/JAVA%E7%9A%84%E5%AD%A6%E4%B9%A04/">JAVA的学习4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/JAVA%E5%AD%A6%E4%B9%A03/" class="archive-article-date">
-  	<time datetime="2020-06-28T11:20:44.882Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/JAVA%E5%AD%A6%E4%B9%A03/">JAVA学习3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/JAVA%E5%AD%A6%E4%B9%A02/" class="archive-article-date">
-  	<time datetime="2020-06-28T01:58:32.139Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/JAVA%E5%AD%A6%E4%B9%A02/">JAVA学习2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +399,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
