@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MySQL学习4 | kookie</title>
+  <title>Archives: 2020/7 | kookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL学习4–DQL查询数据">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL学习4">
-<meta property="og:url" content="http://yoursite.com/2020/07/16/MySQL%E5%AD%A6%E4%B9%A04/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="kookie">
+<meta property="og:url" content="http://yoursite.com/archives/2020/07/page/2/index.html">
 <meta property="og:site_name" content="kookie">
-<meta property="og:description" content="MySQL学习4–DQL查询数据">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200715094441536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200715094551259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-07-16T01:04:46.624Z">
-<meta property="article:modified_time" content="2020-07-16T02:38:42.802Z">
 <meta property="article:author" content="kookie">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200715094441536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="kookie" type="application/atom+xml">
   
@@ -157,300 +150,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MySQL学习4" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      MySQL学习4
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/07/01/JAVA%E5%AD%A6%E4%B9%A06/" class="archive-article-date">
+  	<time datetime="2020-07-01T01:31:59.949Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/07/01/JAVA%E5%AD%A6%E4%B9%A06/">JAVA学习6</a>
     </h1>
   
 
-        
-        <a href="/2020/07/16/MySQL%E5%AD%A6%E4%B9%A04/" class="archive-article-date">
-  	<time datetime="2020-07-16T01:04:46.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="MySQL学习4–DQL查询数据"><a href="#MySQL学习4–DQL查询数据" class="headerlink" title="MySQL学习4–DQL查询数据"></a>MySQL学习4–DQL查询数据</h1><a id="more"></a>
-<h3 id="1-1-DQL-Data-Query-Language-数据库查询语言"><a href="#1-1-DQL-Data-Query-Language-数据库查询语言" class="headerlink" title="1.1 DQL(Data Query Language:数据库查询语言)"></a>1.1 DQL(Data Query Language:数据库查询语言)</h3><ul>
-<li>所有的查询操作都用它：Select</li>
-<li>简单的、复杂的查询都能做</li>
-<li>数据库中最核心的语言</li>
-<li>使用频率最高的语言</li>
-</ul>
-<hr>
-<h3 id="1-2-指定查询字段"><a href="#1-2-指定查询字段" class="headerlink" title="1.2 指定查询字段"></a>1.2 指定查询字段</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-- 查询全部的学生    语法：selete 字段 from</span><br><span class="line">select * from student</span><br><span class="line"></span><br><span class="line">-- 查询指定字段</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM student</span><br><span class="line"></span><br><span class="line">-- 别名，给结果起一个名字 AS 可以给字段起别名，也可以给表起别名</span><br><span class="line">SELECT &#96;studentno&#96; AS 学号,&#96;studentname&#96; AS 学生姓名 FROM student AS s</span><br><span class="line"></span><br><span class="line">-- 函数 Concat (a,b)</span><br><span class="line">SELECT CONCAT(&#39;姓名：&#39;,studentname) AS 新名字 FROM student</span><br></pre></td></tr></table></figure>
-<p>语法：SELECT 字段1，字段2，…FROM 表</p>
-<blockquote>
-<p>有的时候，列名字不是那么的见名知意。我们可以起别名 AS ：<br>字段名 as 别名<br>表名 as 别名</p>
-</blockquote>
-<blockquote>
-<p>去重 distinct</p>
-</blockquote>
-<p>作用：去除SELECT查询出来的结果中重复的数据，只显示一条</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 查询一下哪些同学参加了考试</span><br><span class="line">SELECT * FROM result               -- 查询全部的成绩</span><br><span class="line">SELECT &#96;studentno&#96; FROM result     --查询有哪些同学参加了考试</span><br><span class="line">SELECT DISTINCT &#96;studentno&#96; FROM result    --发现重复数据，去重</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p>数据库的列（表达式）</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT VERSION() -- 查看系统的版本</span><br><span class="line">SELECT 100*3-1 AS 计算结果  --用来计算（表达式）</span><br><span class="line">SELECT @@auto_increment_increment   -- 查询自增的步长(变量)</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentresult&#96;+1 AS &#39;提分后&#39; FROM result    -- 学院考试成绩+1分</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="1-3-where条件子句"><a href="#1-3-where条件子句" class="headerlink" title="1.3 where条件子句"></a>1.3 where条件子句</h3><p>作用：检索数据中<strong>符合条件</strong>的值</p>
-<blockquote>
-<p>逻辑运算符</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SELECT &#96;studentno&#96;,&#96;studentresult&#96; FROM result</span><br><span class="line">WHERE studentresult&gt;&#x3D;95 AND studentresult&lt;&#x3D;100</span><br><span class="line"></span><br><span class="line">-- 模糊查询（区间）</span><br><span class="line">SELECT studentno,studentresult FROM result WHERE studentresult BETWEEN 95 AND 100</span><br><span class="line"></span><br><span class="line">-- 除了1000号学生之外的同学成绩</span><br><span class="line">SELECT studentno,studentresult FROM result WHERE studentno!&#x3D;1000;</span><br><span class="line"></span><br><span class="line">-- !&#x3D; not</span><br><span class="line">SELECT studentno,studentresult FROM result </span><br><span class="line">WHERE NOT studentno&#x3D;1000</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p>模糊查询：比较运算符</p>
-</blockquote>
-<p>|运算符  |语法  |描述</p>
-<table>
-<thead>
-<tr>
-<th>–</th>
-<th>–</th>
-<th>–</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>IS NULL</td>
-<td>A IS NULL</td>
-<td>字段内容为null</td>
-</tr>
-<tr>
-<td>IS NOT NULL</td>
-<td>A IS NOT NULL</td>
-<td>字段内容不为null</td>
-</tr>
-<tr>
-<td>BETWEEN</td>
-<td>a BETWEEN b AND c</td>
-<td>a在b和c之间</td>
-</tr>
-<tr>
-<td><strong>like</strong></td>
-<td>a like b</td>
-<td>SQL匹配，a like b</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th><strong>IN</strong></th>
-<th>a in (a1,a2,a3…)</th>
-<th>a在a1,a2,a3..中的某一个值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-- 查询姓刘的同学  名字后面任意几个字</span><br><span class="line">-- Like结合    %(代表0到任意个字符)         _(代表一个字符)</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM &#96;student&#96; WHERE studentname LIKE &#39;刘%&#39;</span><br><span class="line"></span><br><span class="line">-- 查询姓刘的同学。名字后面中有一个字的</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM &#96;student&#96; WHERE studentname LIKE &#39;刘_&#39;</span><br><span class="line"></span><br><span class="line">-- 查询姓刘的同学。名字后面中有两个字的</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96;,&#96;sex&#96; FROM &#96;student&#96; WHERE studentname LIKE &#39;刘__&#39;</span><br><span class="line"></span><br><span class="line">-- 查看名字中间有嘉字的同学  %嘉%</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM &#96;student&#96; WHERE studentname LIKE &#39;%嘉%&#39;</span><br><span class="line"></span><br><span class="line">-- 查询1001、1002、1003号学员</span><br><span class="line"> SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM &#96;student&#96; WHERE studentno IN (1001,1002,1003)</span><br><span class="line"> SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM &#96;student&#96; WHERE studentaddress IN (&#39;安徽&#39;)</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="1-4-联表查询"><a href="#1-4-联表查询" class="headerlink" title="1.4 联表查询"></a>1.4 联表查询</h3><blockquote>
-<p>JOIN 对比</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20200715094441536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<hr>
-<p><img src="https://img-blog.csdnimg.cn/20200715094551259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mjg2MzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">1.分析需求，分析查询额度字段来自哪些表，(连续查询)</span><br><span class="line">2.确定使用哪种连接查询 7种</span><br><span class="line">确定交叉点（这两个表中那个数据是相同的）</span><br><span class="line">判断的条件：学生表中的studentno&#x3D;成绩表 studentno</span><br><span class="line">*&#x2F;</span><br><span class="line">-- join （连接的表）on（判断的条件） 连接查询</span><br><span class="line">-- where 等值查询</span><br><span class="line">SELECT s.studentno,studentname,subjectno,studentresult </span><br><span class="line">FROM student AS s</span><br><span class="line">INNER JOIN result AS r</span><br><span class="line">WHERE s.studentno&#x3D;r.studentno</span><br><span class="line"></span><br><span class="line">-- right Join</span><br><span class="line">SELECT s.studentno,studentname,subjectno,studentresult</span><br><span class="line">FROM student AS s</span><br><span class="line">RIGHT JOIN result AS r</span><br><span class="line">ON s.studentno&#x3D;r.studentno</span><br><span class="line"></span><br><span class="line">-- left Join</span><br><span class="line">SELECT s.studentno,studentname,subjectno,studentresult</span><br><span class="line">FROM student AS s</span><br><span class="line">LEFT JOIN result AS r</span><br><span class="line">ON s.studentno&#x3D;r.studentno</span><br><span class="line"></span><br><span class="line">-- 查询缺考的同学</span><br><span class="line">SELECT s.studentno,studentname,subjectno,studentresult</span><br><span class="line">FROM student AS s</span><br><span class="line">LEFT JOIN result AS r</span><br><span class="line">ON s.studentno&#x3D;r.studentno</span><br><span class="line">WHERE studentresult IS NULL</span><br><span class="line"></span><br><span class="line">-- 思考题（查询了参加考试的同学的信息：学号、学生姓名、科目名、分数）</span><br><span class="line">&#x2F;*</span><br><span class="line">1.分析需求，分析查询额度字段来自哪些表：student、result、subject</span><br><span class="line">2.确定使用哪种连接查询 7种</span><br><span class="line">确定交叉点（这两个表中那个数据是相同的）</span><br><span class="line">判断的条件：学生表中的studentno&#x3D;成绩表 studentno</span><br><span class="line">*&#x2F;</span><br><span class="line">SELECT s.studentno,studentname,subjectname,studentresult</span><br><span class="line">FROM student AS s</span><br><span class="line">RIGHT JOIN result AS r</span><br><span class="line">ON r.studentno&#x3D;s.studentno</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.subjectno&#x3D;sub.subjectno</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Inner join</td>
-<td>如果表中至少有一个匹配，就返回行</td>
-</tr>
-<tr>
-<td>left join</td>
-<td>会从左表中返回所有的值，即使右表中没有匹配</td>
-</tr>
-<tr>
-<td>right join</td>
-<td>会从右表中返回所有的值，即使右表中没有匹配</td>
-</tr>
-<tr>
-<td>***</td>
-<td></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>字连接</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-- 查询父子信息：把一张表看成两个一摸一样的表</span><br><span class="line">SELECT a.&#96;categoryName&#96; AS &#39;父栏目&#39;,b.&#96;categoryName&#96; AS &#39;子栏目&#39;</span><br><span class="line">FROM &#96;category&#96; AS a,&#96;category&#96; AS b</span><br><span class="line">WHERE a.&#96;categoryid&#96; &#x3D;b.&#96;pid&#96;</span><br><span class="line"></span><br><span class="line">-- 查询科目所属的年级（科目名称、年纪名称）</span><br><span class="line">SELECT &#96;subjectname&#96;,&#96;gradename&#96;</span><br><span class="line">FROM &#96;subject&#96; AS sub</span><br><span class="line">INNER JOIN &#96;grade&#96; AS g</span><br><span class="line">ON sub.&#96;gradeid&#96;&#x3D;g.&#96;gradeid&#96;</span><br><span class="line"></span><br><span class="line">-- 查询了参加 数据库结构-1 考试的同学的信息：学号，学生信息，科目名，分数</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96;,&#96;subjectname&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM student AS s</span><br><span class="line">INNER JOIN result AS r</span><br><span class="line">ON s.studentno&#x3D;r.studentno</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.subjectno&#x3D;sub.subjectno</span><br><span class="line">WHERE subjectname&#x3D;&#39;数据库结构-1&#39;</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="1-5-分页和排序"><a href="#1-5-分页和排序" class="headerlink" title="1.5 分页和排序"></a>1.5 分页和排序</h3><blockquote>
-<p>排序</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-- 排序：升序ASC ，降序DESC</span><br><span class="line">-- order by 通过那个字段</span><br><span class="line">-- 查询的结果根据成绩降序排序</span><br><span class="line"></span><br><span class="line">SELECT s.&#96;studentno&#96;,&#96;studentname&#96;,&#96;subjectname&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM student AS s</span><br><span class="line">INNER JOIN result AS r</span><br><span class="line">ON s.studentno&#x3D;r.studentno</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.subjectno&#x3D;sub.subjectno</span><br><span class="line">WHERE subjectname&#x3D;&#39;数据库结构-1&#39;</span><br><span class="line">ORDER BY studentresult DESC</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>分页</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">-- 分页 每页只显示5条数据</span><br><span class="line">-- 语法：limit 当前页，页面的大小</span><br><span class="line">SELECT s.&#96;studentno&#96;,&#96;studentname&#96;,&#96;subjectname&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM student AS s</span><br><span class="line">INNER JOIN result AS r</span><br><span class="line">ON s.studentno&#x3D;r.studentno</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.subjectno&#x3D;sub.subjectno</span><br><span class="line">WHERE subjectname&#x3D;&#39;数据库结构-1&#39;</span><br><span class="line">ORDER BY studentresult ASC</span><br><span class="line">LIMIT 5,5</span><br><span class="line"></span><br><span class="line">-- 第一页 limit0,5</span><br><span class="line">-- 第n页  limit(n-1)*5,5    (n-1)*pagesize,pagesize</span><br><span class="line">-- [pagesize:页面大小]</span><br><span class="line">--[(n-1)*pagesize:起始值]</span><br><span class="line">-- [n:当前页]</span><br><span class="line">-- [数据总数&#x2F;页面大小&#x3D;总页数]</span><br><span class="line"></span><br><span class="line">-- 思考题</span><br><span class="line">-- 查询java第一学年 课程成绩排名前十的学生，并且分数大于80的学生信息（学号、姓名、课程名称、分数）</span><br><span class="line">SELECT s.&#96;studentno&#96;,&#96;studentname&#96;,&#96;subjectname&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM &#96;student&#96; AS s</span><br><span class="line">INNER JOIN &#96;result&#96; AS r</span><br><span class="line">ON s.&#96;studentno&#96;&#x3D;r.&#96;studentno&#96;</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.&#96;subjectno&#96;&#x3D;sub.&#96;subjectname&#96;</span><br><span class="line">WHERE &#96;subjectname&#96;&#x3D;&#39;java第一学年&#39; AND &#96;studentresult&#96;&#x3D;80 </span><br><span class="line">ORDER BY &#96;studentresult&#96; DESC</span><br><span class="line">LIMIT 0,10</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="1-6-子查询"><a href="#1-6-子查询" class="headerlink" title="1.6 子查询"></a>1.6 子查询</h3><p>where (这个值是计算出来的)<br>本质：在where语句中嵌套一个子查询语句<br>where(select *from)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">-- 1、查询数据库结构-1的所有考试结果（学号、科目编号、成绩），降序排列</span><br><span class="line">-- 方式一：使用连接查询</span><br><span class="line">SELECT &#96;studentno&#96;,r.&#96;subjectno&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM &#96;result&#96; AS r</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.&#96;studentno&#96;&#x3D;sub.&#96;subjectno&#96;</span><br><span class="line">WHERE &#96;subjectname&#96;&#x3D;&#39;数据库结构-1&#39;</span><br><span class="line">ORDER BY &#96;studentresult&#96; DESC</span><br><span class="line"></span><br><span class="line">-- 方式二：使用子查询</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;subjectno&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM &#96;result&#96;</span><br><span class="line">WHERE(</span><br><span class="line">       SELECT &#96;subjectno&#96; FROM &#96;subject&#96;</span><br><span class="line">       WHERE &#96;subjectname&#96;&#x3D;&#39;数据库结构-1&#39;</span><br><span class="line">)</span><br><span class="line">ORDER BY &#96;studentresult&#96; DESC</span><br><span class="line"></span><br><span class="line">-- 分数不小于80分的学生的学号和姓名</span><br><span class="line">SELECT DISTINCT s.&#96;studentno&#96;,&#96;studentname&#96;</span><br><span class="line">FROM &#96;student&#96; AS s</span><br><span class="line">INNER JOIN &#96;result&#96; AS r</span><br><span class="line">ON s.&#96;studentno&#96;&#x3D;r.&#96;studentno&#96;</span><br><span class="line">WHERE &#96;studentresult&#96;&gt;&#x3D;80</span><br><span class="line"></span><br><span class="line">-- 在这个基础上增加一个科目，高等数学-2</span><br><span class="line">SELECT DISTINCT s.&#96;studentno&#96;,&#96;studentname&#96;</span><br><span class="line">FROM &#96;student&#96; AS s</span><br><span class="line">INNER JOIN &#96;result&#96; AS r</span><br><span class="line">ON s.&#96;studentno&#96;&#x3D;r.&#96;studentno&#96;</span><br><span class="line">WHERE &#96;studentresult&#96;&gt;&#x3D;80 AND &#96;subjectno&#96;&#x3D;(</span><br><span class="line">     SELECT &#96;subjectno&#96; FROM &#96;subject&#96; </span><br><span class="line">     WHERE &#96;subjectno&#96;&#x3D;&#39;高等数学-2&#39;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">-- 查询课程为 高等数学-2 且分数不小于80的同学的学号和姓名</span><br><span class="line">SELECT s.&#96;studentno&#96;,&#96;studentname&#96;</span><br><span class="line">FROM &#96;student&#96; AS s</span><br><span class="line">INNER JOIN &#96;result&#96; AS r</span><br><span class="line">ON s.&#96;studentno&#96;&#x3D;r.&#96;subjectno&#96;</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.&#96;subjectno&#96;&#x3D;sub.&#96;subjectno&#96;</span><br><span class="line">WHERE &#96;subjectname&#96;&#x3D;&#39;高等数学-2&#39; AND &#96;studentresult&#96;&gt;&#x3D;80</span><br><span class="line"></span><br><span class="line">-- 再次改造(由里及外)</span><br><span class="line">SELECT &#96;studentno&#96;,&#96;studentname&#96; FROM &#96;student&#96; WHERE &#96;studentno&#96; IN(</span><br><span class="line">        SELECT &#96;studentno&#96; FROM &#96;result&#96; WHERE &#96;studentresult&#96;&gt;&#x3D;80 AND &#96;subjectno&#96;&#x3D;(</span><br><span class="line">             SELECT &#96;subjectno&#96; FROM &#96;subject&#96; WHERE &#96;subjectname&#96;&#x3D;&#39;高等数学-2&#39;</span><br><span class="line">        ) </span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">-- 练习：查询C语言-1前5名同学的成绩的信息（学号、姓名、分数）</span><br><span class="line">SELECT s.&#96;studentno&#96;,&#96;studentname&#96;,&#96;studentresult&#96;</span><br><span class="line">FROM &#96;student&#96; AS s</span><br><span class="line">INNER JOIN &#96;result&#96; AS r</span><br><span class="line">ON s.&#96;studentno&#96;&#x3D;r.&#96;studentno&#96;</span><br><span class="line">INNER JOIN &#96;subject&#96; AS sub</span><br><span class="line">ON r.&#96;subjectno&#96;&#x3D;sub.&#96;subjectno&#96;</span><br><span class="line">WHERE &#96;subjectname&#96;&#x3D;&#39;C语言-1&#39;</span><br><span class="line">ORDER BY &#96;studentresult&#96; DESC</span><br><span class="line">LIMIT 0,5</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<h6 id="select小结"><a href="#select小结" class="headerlink" title="select小结"></a>select小结</h6><p>selcect 去重 要查询的字段 from 表 （注意：字段和表可以去别名）</p>
-<p>where (具体的值，子查询语句)</p>
-<p>Group by (通过哪个字段来分组)</p>
-<p>having (过滤分组后的信息，条件和where是一样的，但是位置不一样，在分组以后)</p>
-<p>limit startindex,pagesize</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/16/MySQL%E5%AD%A6%E4%B9%A04/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/07/16/MySQL%E5%AD%A6%E4%B9%A05/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL学习5
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/07/14/MySQL%E5%AD%A6%E4%B9%A03/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL学习3</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2020/07/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/07/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -474,8 +219,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
